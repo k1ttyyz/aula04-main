@@ -15,6 +15,16 @@ export const middleware = (request) => {
     }
     NextResponse.next();
 };
+
+if (!isTokenValidated || !token) {
+    if (token === '/pages') {
+        return ('/pages/dashboard');
+    }
+}
+
+
+
+
 export const config = {
     matcher: ['/', '/pages/dashboard']
 };
